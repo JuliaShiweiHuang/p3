@@ -12,9 +12,33 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
+    //
+    // Route::get('/', function () {
+    //     return view('welcome');
+    // });
 
     Route::get('/', function () {
-        return view('welcome');
+        return 'Developer&apos;s Best Friend';
+    });
+
+
+    Route::get('/loren-ipsum', function () {
+        return 'How many paragraphs do you want?';
+    });
+
+    Route::get('/user-generator', function () {
+
+        $view = '<form method="POST" action="/user-generator">';;
+        $view = csrf_field();
+        $view .= 'How many users? <input type = "text" name="numUsers">';
+        $view .= '<input type="submit">';
+        $view .= '</form>';
+
+
+
+        return $view;
+
+
     });
 
 });

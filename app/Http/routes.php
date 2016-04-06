@@ -17,14 +17,17 @@ Route::group(['middleware' => ['web']], function () {
     //     return view('welcome');
     // });
 
-    Route::get('/', function () {
-        return 'Developer&apos;s Best Friend';
+    // Route::get('/', function () {
+    //     return 'Developer&apos;s Best Friend';
+    // });
+    Route::get('/', function() {
+        return 'This is temporary placeholder for Developers Best Friend Page';
     });
 
+    Route::get('/lorem-ipsum', 'DevelopersBestFriendController@getLoremIpsumGenerator');
 
-    Route::get('/loren-ipsum', function () {
-        return 'How many paragraphs do you want?';
-    });
+    Route::get('/userGenerator', 'DevelopersBestFriendController@getUserGenerator');
+
 
     Route::get('/user-generator', function () {
 

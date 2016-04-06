@@ -1,22 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Controller;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class DevelopersBestFriendController extends Controller {
+class BookController extends Controller {
 
     /**
     * Responds to requests to GET /books
     */
-    // different methods
-    // for example: getIndex method to list all the books
-    public function getLoremIpsumGenerator() {
-        return 'Lorem Ipsum Generator';
-    }
-
-    public function getUserGenerator() {
-        return 'How many users?';
+    public function getIndex() {
+        return 'List all the books';
     }
 
     /**

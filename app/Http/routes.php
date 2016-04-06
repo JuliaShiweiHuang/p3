@@ -24,10 +24,15 @@ Route::group(['middleware' => ['web']], function () {
         return 'This is temporary placeholder for Developers Best Friend Page';
     });
 
-    Route::get('/lorem-ipsum', 'DevelopersBestFriendController@getLoremIpsumGenerator');
+    Route::get('/lorem-ipsum', 'DevelopersToolController@getLoremIpsumGenerator');
 
-    Route::get('/userGenerator', 'DevelopersBestFriendController@getUserGenerator');
+    Route::get('/userGenerator', 'DevelopersToolController@getUserGenerator');
 
+
+    Route::get('/books', 'BookController@getIndex');
+
+
+    Route::get('/sample', 'sampleController@getSample');
 
     Route::get('/user-generator', function () {
 

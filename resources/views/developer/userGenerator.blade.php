@@ -60,7 +60,7 @@
 
 	<h1>User Generator</h1>
 
-	<form method="POST" action="http://p3.dwa15.com/user-generator" accept-charset="UTF-8"><input name="_token" type="hidden" value="nJG3moSfAfGw6Zt9cjcvZDtrJHqbgHbLlPBXKvlo">
+	<form method="POST" action="/user-generator" accept-charset="UTF-8"><input name="_token" type="hidden">
 		<label for="users">How many users?</label>		<input maxlength="2" name="users" type="text" value="5" id="users"> (Max: 99)
 		<br>
 

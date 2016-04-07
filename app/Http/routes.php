@@ -35,6 +35,17 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/user-generator', 'DevelopersToolController@getUserGenerator');
 
 
+
+
+    Route::get('/practice', function() {
+        $generator = new Badcow\LoremIpsum\Generator();
+        $paragraphs = $generator->getParagraphs(5);
+        return implode('<p>', $paragraphs);
+        // echo implode('<p>', $paragraphs);
+
+    });
+
+
     Route::get('/books', 'BookController@getIndex');
 
 

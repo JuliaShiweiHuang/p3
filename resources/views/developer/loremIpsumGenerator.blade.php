@@ -53,7 +53,7 @@
 
 	<form method='POST'>
 
-		<input name="_token" type="hidden" value="nJG3moSfAfGw6Zt9cjcvZDtrJHqbgHbLlPBXKvlo">
+		<input name="_token" type="hidden" >
 		<label for="paragraphs">Paragraphs</label>
 		<input maxlength="2" name="paragraphs" type="text" value="5" id="paragraphs"> (Max: 99)
 

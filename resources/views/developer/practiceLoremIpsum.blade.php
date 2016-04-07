@@ -48,7 +48,7 @@
 
 	<h1>Practice Page to Show Lorem Ipsum Paragraphs </h1>
 
-	
+	{{dd($paragraphs)}}
 
 
 

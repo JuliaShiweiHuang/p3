@@ -45,6 +45,9 @@ Route::group(['middleware' => ['web']], function () {
 
     });
 
+    Route::get('/practiceLoremIpsum', 'DevelopersToolController@getPractice');
+
+
 
     Route::get('/books', 'BookController@getIndex');
 

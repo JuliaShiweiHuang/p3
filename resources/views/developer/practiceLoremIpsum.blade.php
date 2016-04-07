@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,12 +47,18 @@
 
 	<h1>Practice Page to Show Lorem Ipsum Paragraphs </h1>
 
-	{{dd($paragraphs)}}
+	<!-- {{dd($paragraphs)}} -->
+	<!-- <h3>{{$paragraphs}}</h3> -->
+	<!-- @foreach ($paragraphs as $paragraph)
+    <p>{{ $paragraph }}</p>
+  	@endforeach -->
 
-
-
-
-
+	<!-- <h1>Show paragraphs: {{$paragraphs}}</h1> -->
+	<?php
+	foreach($paragraphs as $paragraph) {
+		echo $paragraph;
+	}
+	?>
 </div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>

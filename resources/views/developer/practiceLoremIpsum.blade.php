@@ -47,17 +47,12 @@
 
 	<h1>Practice Page to Show Lorem Ipsum Paragraphs </h1>
 
-	<!-- {{dd($paragraphs)}} -->
-	<!-- <h3>{{$paragraphs}}</h3> -->
-	<!-- @foreach ($paragraphs as $paragraph)
-    <p>{{ $paragraph }}</p>
-  	@endforeach -->
-
-	<!-- <h1>Show paragraphs: {{$paragraphs}}</h1> -->
 	<?php
 	foreach($paragraphs as $paragraph) {
-		echo $paragraph;
-	}
+	   echo $paragraph;
+	  
+	   echo "<br>";
+    }
 	?>
 </div>
 

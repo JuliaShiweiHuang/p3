@@ -41,32 +41,14 @@ Route::group(['middleware' => ['web']], function () {
         $generator = new Badcow\LoremIpsum\Generator();
         $paragraphs = $generator->getParagraphs(5);
         return implode('<p>', $paragraphs);
-        // echo implode('<p>', $paragraphs);
 
     });
 
     Route::get('/practiceLoremIpsum', 'DevelopersToolController@getPractice');
 
-
-
     Route::get('/books', 'BookController@getIndex');
-
 
     Route::get('/sample', 'sampleController@getSample');
 
-    // Route::get('/user-generator', function () {
-    //
-    //     $view = '<form method="POST" action="/user-generator">';;
-    //     $view = csrf_field();
-    //     $view .= 'How many users? <input type = "text" name="numUsers">';
-    //     $view .= '<input type="submit">';
-    //     $view .= '</form>';
-    //
-    //
-    //
-    //     return $view;
-    //
-    //
-    // });
 
 });

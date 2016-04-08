@@ -28,8 +28,6 @@ class DevelopersToolController extends Controller
 
         $generator = new Generator();
         $paragraphs = $generator->getParagraphs(5);
-        // echo implode('<p>', $paragraphs);
-        // return view('developer.practiceLoremIpsum');
         return view('developer.practiceLoremIpsum')->with('paragraphs', $paragraphs);
    }
 

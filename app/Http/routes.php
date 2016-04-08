@@ -13,8 +13,11 @@ Route::group(['middleware' => ['web']], function () {
         $paragraphs = $generator->getParagraphs(5);
         return implode('<p>', $paragraphs);
     });
-
+    # route for the lorem ipsum page to display the form via GET method
     Route::get('/practiceLoremIpsum', 'DevelopersToolController@getPractice');
+
+    # route for the lorem ipsum page to process the form via POST method
+    Route::post('/practiceLoremIpsum', 'DevelopersToolController@postPractice');
 
     Route::get('/books', 'BookController@getIndex');
 

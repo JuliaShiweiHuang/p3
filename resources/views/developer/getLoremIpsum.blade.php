@@ -43,17 +43,26 @@
 
 <div class='container'>
 
+	<a href='/'>&larr; Home</a>
 
-
-	<h1>Practice Page to Show Lorem Ipsum Paragraphs </h1>
-
-	<?php
-	foreach($paragraphs as $paragraph) {
-	   echo $paragraph;
-	  
-	   echo "<br>";
-    }
-	?>
+	<h1>Lorem Ipsum Generator </h1>
+	<h4>How many paragraphs do you want?</h4>
+	<form method='POST' action='practiceLoremIpsum'>
+		<label for="number_of_paragraphs">Paragraphs</label>
+		<input maxlength="2" type="text" name="number_of_paragraphs" id="number_of_paragraphs">
+		<br><br>
+		<input type="submit" value="Generate">
+	</form>
+	<h3>
+		<?php
+			if(isset($_POST['number_of_paragraphs'])) {
+				foreach($paragraphs as $paragraph) {
+				   echo $paragraph;
+				   echo "<br>";
+			   }
+			}
+		?>
+	</h3>
 </div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>

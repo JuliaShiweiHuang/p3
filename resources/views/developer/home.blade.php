@@ -44,7 +44,7 @@
 
 <p>Create random filler text for your applications.</p>
 
-<a href='/lorem-ipsum'>Generate some text...</a>
+<a href='/practiceLoremIpsum'>Generate some text...</a>
 
 <br>
 

@@ -60,6 +60,7 @@
 				foreach($paragraphs as $paragraph) {
 				   echo $paragraph;
 				   echo "<br>";
+				   echo "<br>";
 			   }
 			}
 		?>

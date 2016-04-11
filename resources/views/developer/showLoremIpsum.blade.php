@@ -47,7 +47,9 @@
 
 	<h1>Lorem Ipsum Generator </h1>
 	<h4>How many paragraphs do you want?</h4>
-	<form method='POST' action='/practiceLoremIpsum'>
+
+
+	<form method='POST' action='practiceLoremIpsum'>
 		<label for="number_of_paragraphs">Paragraphs</label>
 		<input maxlength="2" type="text" name="number_of_paragraphs" id="number_of_paragraphs">
 		<br><br>

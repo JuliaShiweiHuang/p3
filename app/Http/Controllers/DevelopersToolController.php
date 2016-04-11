@@ -26,21 +26,16 @@ class DevelopersToolController extends Controller
 
    public function getPractice() {
        return view('developer.getLoremIpsum');
-        // $generator = new Generator();
-        // $paragraphs = $generator->getParagraphs($numOfParagraphs);
-        // return view('developer.practiceLoremIpsum')->with('paragraphs', $paragraphs);
    }
    public function postPractice(Request $request) {
-        // $_POST['number_of_paragraphs'] = $numOfParagraphs;
-        // $numOfParagraphs = $_POST['number_of_paragraphs'];
         $this->validate($request,[
             'number_of_paragraphs' => 'required'
         ]);
 
 
         $generator = new Generator();
-        $paragraphs = $generator->getParagraphs($numOfParagraphs);
-        return view('developer.showLoremIpsum')->with('paragraphs', $paragraphs);
+        $paragraphs = $generator->getParagraphs($request->input('number_of_paragraphs'));
+        return view('developer.getLoremIpsum')->with('paragraphs', $paragraphs);
    }
 
 

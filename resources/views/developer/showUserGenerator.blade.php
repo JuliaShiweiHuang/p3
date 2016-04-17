@@ -60,22 +60,25 @@
 
 	<h1>User Generator</h1>
 
-	<form method="POST" action="/user-generator" accept-charset="UTF-8"><input name="_token" type="hidden">
-		<label for="users">How many users?</label>		<input maxlength="2" name="users" type="text" value="5" id="users"> (Max: 99)
+	<form method="POST" action="practiceUserGenerator">
+		{{ csrf_field() }}
+		<label for="users">How many users?</label>
+		<input maxlength="2" name="users" type="text" value="5" id="users"> (Max: 99)
 		<br>
 
 		Include...
 		<br>
-		<input name="birthdate" type="checkbox">		<label for="birthdate">Birthdate</label>		<br>
+		<input name="birthdate" type="checkbox">
+		<label for="birthdate">Birthdate</label>
+		<br>
 
-		<input name="profile" type="checkbox">		<label for="profile">Profile</label>		<br>
+		<input name="profile" type="checkbox">
+		<label for="profile">Profile</label>
+		<br>
 
-		<input name="_token" type="hidden" value="nJG3moSfAfGw6Zt9cjcvZDtrJHqbgHbLlPBXKvlo">
+		<input name="_token" type="hidden">
 		<input type="submit" value="Generate!">
     </form>
-
-
-
 
 
 

@@ -32,11 +32,25 @@ class DevelopersToolController extends Controller
             'number_of_paragraphs' => 'required'
         ]);
 
-
         $generator = new Generator();
         $paragraphs = $generator->getParagraphs($request->input('number_of_paragraphs'));
         return view('developer.getLoremIpsum')->with('paragraphs', $paragraphs);
    }
+
+
+      public function getPracticeUser() {
+          return view('developer.getUserGenerator');
+      }
+
+      public function postPractice(Request $request) {
+           $this->validate($request,[
+               'number_of_paragraphs' => 'required'
+           ]);
+
+           $generator = new Generator();
+           $paragraphs = $generator->getParagraphs($request->input('number_of_paragraphs'));
+           return view('developer.getUserGenerator')->with('paragraphs', $paragraphs);
+      }
 
 
 }

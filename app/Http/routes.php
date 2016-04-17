@@ -20,6 +20,10 @@ Route::group(['middleware' => ['web']], function () {
     # route for the lorem ipsum page to process the form via POST method
     Route::post('/practiceLoremIpsum', 'DevelopersToolController@postPractice');
 
+    Route::get('/practiceUserGenerator', 'DevelopersToolController@getPracticeUser');
+    Route::post('/practiceUserGenerator', 'DevelopersToolController@postPracticeUser');
+
+
     Route::get('/books', 'BookController@getIndex');
 
     Route::get('/sample', 'sampleController@getSample');

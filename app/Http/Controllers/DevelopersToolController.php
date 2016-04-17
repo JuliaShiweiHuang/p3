@@ -42,7 +42,7 @@ class DevelopersToolController extends Controller
           return view('developer.getUserGenerator');
       }
 
-      public function postPractice(Request $request) {
+      public function postPracticeUser(Request $request) {
            $this->validate($request,[
                'number_of_paragraphs' => 'required'
            ]);

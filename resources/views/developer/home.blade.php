@@ -51,7 +51,7 @@
 <h2>Random User Generator</h2>
 <p>Create random user data for your applications. Like Lorem Ipsum, but for people.</p>
 
-<a href='/user-generator'>Generate some users...</a>
+<a href='/practiceUserGenerator'>Generate some users...</a>
 
 
 

@@ -61,25 +61,40 @@
 	<h1>User Generator</h1>
 
 	<form method="POST" action="practiceUserGenerator">
-		{{ csrf_field() }}
 		<label for="users">How many users?</label>
 		<input maxlength="2" name="users" type="text" value="5" id="users"> (Max: 99)
 		<br>
 
 		Include...
 		<br>
-		<input name="birthdate" type="checkbox">
+		<input name="birthdate" type="checkbox" name="birthdateSelect" value="checkboxBirthdate">
 		<label for="birthdate">Birthdate</label>
 		<br>
 
-		<input name="profile" type="checkbox">
+		<input name="profile" type="checkbox" name="profileSelect" value="checkboxProfile">
 		<label for="profile">Profile</label>
 		<br>
 
 		<input name="_token" type="hidden">
 		<input type="submit" value="Generate!">
     </form>
+	<h3>
+		<?php
+			if(isset($_POST['users'])) {
+				for ($i=0; $i < $users; $i++) {
+					echo $faker->name, "\n";
+					if(isset($_POST['birthdate'])) {
+						echo $faker->dateTimeThisCentury->format('Y-m-d');
 
+					}
+					if(isset($_POST['profile'])) {
+						echo $faker->address, "\n";
+						echo $faker->text;
+					}
+				}
+			}
+		?>
+	</h3>
 
 
 </div>

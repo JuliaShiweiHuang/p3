@@ -43,15 +43,18 @@ class DevelopersToolController extends Controller
       }
 
       public function postPracticeUser(Request $request) {
-           $this->validate($request,[
-               'number_of_paragraphs' => 'required'
-           ]);
+        $this->validate($request,[
+            'users' => 'required'
+        ]);
+        # generate faker class;
+        $faker = Faker\Factory::create();
+        $name = $faker->name;
+        $address = $faker->address;
+        $text = $faker->text;
 
-           $generator = new Generator();
-           $paragraphs = $generator->getParagraphs($request->input('number_of_paragraphs'));
-           return view('developer.getUserGenerator')->with('paragraphs', $paragraphs);
+        return view('developer.getUserGenerator')->with('users',$name)
+                                                 ->with('profile', $address);
+
       }
-
-
 }
 ?>

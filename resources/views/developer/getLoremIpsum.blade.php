@@ -57,6 +57,7 @@
 	<h3>
 		<?php
 			if(isset($_POST['number_of_paragraphs'])) {
+				{{--$paragraph as the key from controller.php--}}
 				foreach($paragraphs as $paragraph) {
 				   echo $paragraph;
 				   echo "<br>";

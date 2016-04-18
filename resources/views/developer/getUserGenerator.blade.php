@@ -68,11 +68,11 @@
 
 		Include...
 		<br>
-		<input name="birthdate" type="checkbox" name="birthdateSelect" value="checkboxBirthdate">
+		<input name="birthdate" type="checkbox" value="checkboxBirthdate">
 		<label for="birthdate">Birthdate</label>
 		<br>
 
-		<input name="profile" type="checkbox" name="profileSelect" value="checkboxProfile">
+		<input name="profile" type="checkbox" value="checkboxProfile">
 		<label for="profile">Profile</label>
 		<br>
 
@@ -85,12 +85,12 @@
 				for ($i=0; $i < $users; $i++) {
 					echo $faker->name, "\n";
 					if(isset($_POST['birthdate'])) {
-						echo $faker->dateTimeThisCentury->format('Y-m-d');
+						echo $profile[$i];
 
 					}
 					if(isset($_POST['profile'])) {
-						echo $faker->address, "\n";
-						echo $faker->text;
+						echo $users[$i];
+
 					}
 				}
 			}

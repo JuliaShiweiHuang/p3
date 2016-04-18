@@ -33,6 +33,7 @@ class DevelopersToolController extends Controller
         ]);
 
         $generator = new Generator();
+        // $paragraphs as an array;
         $paragraphs = $generator->getParagraphs($request->input('number_of_paragraphs'));
         return view('developer.getLoremIpsum')->with('paragraphs', $paragraphs);
    }
@@ -48,10 +49,13 @@ class DevelopersToolController extends Controller
         ]);
         # generate faker class;
         $faker = Faker\Factory::create();
-        $name = $faker->name;
-        $address = $faker->address;
-        $text = $faker->text;
-
+        for ($i = 0; $i < $users; $i++) {
+            // $name array
+            $name[$i] = $faker->name;
+            $address[$i] = $faker->address;
+            $text[$i] = $faker->text;
+        }
+        // 'users' as an array;
         return view('developer.getUserGenerator')->with('users',$name)
                                                  ->with('profile', $address);
 

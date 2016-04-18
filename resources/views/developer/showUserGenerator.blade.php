@@ -84,12 +84,12 @@
 				for ($i=0; $i < $users; $i++) {
 					echo $faker->name, "\n";
 					if(isset($_POST['birthdate'])) {
-						echo $faker->dateTimeThisCentury->format('Y-m-d');
+						echo $profile[$i];
 
 					}
 					if(isset($_POST['profile'])) {
-						echo $faker->address, "\n";
-						echo $faker->text;
+						echo $users[$i];
+
 					}
 				}
 			}

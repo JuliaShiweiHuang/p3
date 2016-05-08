@@ -63,7 +63,7 @@
 	<form method="POST" action="practiceUserGenerator">
 		{{ csrf_field() }}
 		<label for="users">How many users?</label>
-		<input maxlength="2" name="users" type="text" value="5" id="users"> (Max: 99)
+		<input maxlength="2" name="users" type="text" id="users"> (Max: 99)
 		<br>
 
 		Include...

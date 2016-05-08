@@ -48,8 +48,8 @@ class DevelopersToolController extends Controller
             'users' => 'required'
         ]);
         # generate faker class;
-        $faker = Faker\Factory::create();
-        for ($i = 0; $i < $users; $i++) {
+        $faker = \Faker\Factory::create();
+        for ($i = 0; $i < $request->input('users'); $i++) {
             // $name array
             $name[$i] = $faker->name;
             $address[$i] = $faker->address;

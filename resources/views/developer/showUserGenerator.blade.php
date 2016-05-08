@@ -75,22 +75,15 @@
 		<label for="profile">Profile</label>
 		<br>
 
-		<input name="_token" type="hidden">
 		<input type="submit" value="Generate!">
     </form>
 	<h3>
 		<?php
 			if(isset($_POST['users'])) {
-				for ($i=0; $i < $users; $i++) {
-					echo $faker->name, "\n";
-					if(isset($_POST['birthdate'])) {
-						echo $profile[$i];
 
-					}
-					if(isset($_POST['profile'])) {
-						echo $users[$i];
+				foreach($users as $user) {
+					echo $user;
 
-					}
 				}
 			}
 		?>
